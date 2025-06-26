@@ -28,14 +28,12 @@ namespace Test
 
         }
 
-        private void txbSoloNumeros_TextChanged(object sender, EventArgs e)
+        private void txbSoloNumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txbSoloNumeros.Text, "^[0-9]*$"))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                MessageBox.Show("Por favor solo números.");
-                txbSoloNumeros.Text = string.Empty;
+                e.Handled = true;
             }
-
         }
     }
 }

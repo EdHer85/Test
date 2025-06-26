@@ -93,7 +93,7 @@
             this.txbSoloNumeros.Name = "txbSoloNumeros";
             this.txbSoloNumeros.Size = new System.Drawing.Size(420, 30);
             this.txbSoloNumeros.TabIndex = 5;
-            this.txbSoloNumeros.TextChanged += new System.EventHandler(this.txbSoloNumeros_TextChanged);
+            this.txbSoloNumeros.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSoloNumeros_KeyPress);
             // 
             // txbNoVacio
             // 
